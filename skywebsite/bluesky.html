@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Sky Photograph</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qtg8awy.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+</head>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(function() {
+        $('a[href^="#"]').click(function() {
+            var speed = 800;
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            console.log(target);
+            $("body,html").animate({
+                scrollTop: position
+            }, speed, "swing");
+            return false;
+
+        });
+    });
+</script>
+
+
+<body>
+    <div class="bluesky">
+        <div class="sticky">
+            <li class="sticky_ot"><a href="index.html">Top</a></li>
+            <li class="sticky_ot"><a href="sunset.html">Sunset</a></li>
+            <li class="sticky_nowb"><a href="#">Blue Sky</a></li>
+            <li class="sticky_ot"><a href="season.html">Season</a></li>
+        </div>
+
+        <img src="image/bluesky/sky_blue.png" alt="" width="100%" class="animated rotateIn bluesky_1 ">
+        <img src="image/bluesky/bluesky_logo.png" alt="" width="50%" class="bluesky_2">
+        <p>Scroll</p>
+
+        <div class="photo">
+            <li class="b1 FadeInUp"><img src="image/bluesky/2017_5_22_1.jpg" alt="" width="75%"></li>
+            <li class="b2 FadeInUp"><img src="image/bluesky/2017_5_22_2.jpg" alt="" width="75%"></li>
+            <li class="b3 FadeInUp"><img src="image/bluesky/2017_5_27.jpg" alt="" width="75%"></li>
+            <li class="b4 FadeInUp"><img src="image/bluesky/2017_10_26.jpg" alt="" width="75%"></li>
+            <li class="b5 FadeInUp"><img src="image/bluesky/2017_11_1.jpg" alt="" width="75%"></li>
+            <li class="b6 FadeInUp"><img src="image/bluesky/2018_11_1.jpg" alt="" width="75%"></li>
+            <li class="b7 FadeInUp"><img src="image/bluesky/2019_10_31.jpg" alt="" width="75%"></li>
+        </div>
+        
+        <a href="#">
+            <div class="back"><img src="image/chevrons-topw.svg" alt="" width="66%"></div>
+        </a>
+
+    </div>
+
+
+
+</body>
+
+<script>
+    $(function() {
+        function animation() {
+            $(".FadeInUp").each(function() {
+                var target2 = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                console.log(target2);
+                console.log(scroll);
+                if (scroll > target2 - windowHeight) {
+                    $(this).css("opacity", "1");
+                    $(this).css("transform", "translateY(0)");
+                }
+            });
+        }
+
+        animation();
+        $(window).scroll(function() {
+            animation();
+        });
+    });
+</script>
+
+</html>

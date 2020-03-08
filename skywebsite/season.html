@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sky Photograph</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qtg8awy.css">
+    <link rel="stylesheet" href="css/animate.css">
+<!--    <link rel="stylesheet" href="css/panoramix.min.css">-->
+</head>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<!--<script src="js/panoramix.min.js"></script>-->
+<script>
+    $(function() {
+        $('a[href^="#"]').click(function() {
+            var speed = 800;
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            console.log(target);
+            $("body,html").animate({
+                scrollTop: position
+            }, speed, "swing");
+            return false;
+
+        });
+    });
+</script>
+
+<body>
+
+    <div class="season">
+        <div class="sticky">
+            <li class="sticky_ot"><a href="index.html">Top</a></li>
+            <li class="sticky_ot"><a href="sunset.html">Sunset</a></li>
+            <li class="sticky_ot"><a href="bluesky.html">Blue Sky</a></li>
+            <li class="sticky_nowse"><a href="#">Season</a></li>
+        </div>
+
+        <img src="image/season/sky_season.png" alt="" width="100%" class="season_1">
+        <img src="image/season/season_logo.png" alt="" width="15%" class="season_2 animated flip">
+
+        <p>Scroll</p>
+
+        <div class="photo">
+            <li class="se1 FadeInUp"><img src="image/season/2017_11_18.jpg" alt="" width="75%"></li>
+            <li class="se2 FadeInUp"><img src="image/season/2018_1_22_1.jpg" alt="" width="75%"></li>
+            <li class="se3 FadeInUp"><img src="image/season/2018_1_22_2.jpg" alt="" width="75%"></li>
+            <li class="se4 FadeInUp"><img src="image/season/2018_1_22_3.jpg" alt="" width="75%"></li>
+            <li class="se5 FadeInUp"><img src="image/season/2018_3_26.jpg" alt="" width="75%"></li>
+            <li class="se6 FadeInUp"><img src="image/season/2018_11_22.jpg" alt="" width="75%"></li>
+
+
+            <li class="se7 FadeInUp">
+                <div class=" containerbox">
+                    <img src="image/season/2018_11_23.jpg" alt="" class="panoramixImg" width="100%">
+<!--
+                    <div id="myPanoramix" class="pano">
+                        <div class="controls">
+                            <a href="#" class="left">&laquo;</a>
+                            <a href="#" class="right">&raquo;</a></div>
+                    </div>
+-->
+                </div>
+            </li>
+
+
+            <li class="se8 FadeInUp"><img src="image/season/2019_11_18.jpg" alt="" width="75%"></li>
+            <li class="se9 FadeInUp"><img src="image/season/2019_12_3.jpg" alt="" width="75%"></li>
+            <li class="se10 FadeInUp"><img src="image/season/2019_12_5.jpg" alt="" width="75%"></li>
+            <li class="se11 FadeInUp"><img src="image/season/2019_12_12.jpg" alt="" width="75%"></li>
+            <li class="se12 FadeInUp"><img src="image/season/2019_12_23_1.jpg" alt="" width="75%"></li>
+            <li class="se13 FadeInUp"><img src="image/season/2020_1_20.jpg" alt="" width="75%"></li>
+            <li class="se14 FadeInUp"><img src="image/season/2020_2_10_1.jpg" alt="" width="75%"></li>
+            <li class="se15 FadeInUp"><img src="image/season/2020_2_28.jpg" alt="" width="75%"></li>
+
+        </div>
+
+        <a href="#">
+            <div class="back"><img src="image/chevrons-topw.svg" alt="" width="66%"></div>
+        </a>
+    </div>
+
+</body>
+
+<script>
+    $(function() {
+        function animation() {
+            $(".FadeInUp").each(function() {
+                var target2 = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                console.log(target2);
+                console.log(scroll);
+                if (scroll > target2 - windowHeight) {
+                    $(this).css("opacity", "1");
+                    $(this).css("transform", "translateY(0)");
+                }
+            });
+        }
+
+        animation();
+        $(window).scroll(function() {
+            animation();
+        });
+    });
+
+//    $("#myPanoramix").panoramix();
+//
+//    $(document).ready(function() {
+//        $("#myPanoramix").panoramix({
+//            speed: 150
+//        });
+//    });
+</script>
+
+</html>

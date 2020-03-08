@@ -1,0 +1,789 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*@font-face {*/
+
+font-family: "FuturaBT-Light";
+src: url("../font/futura/0/futuralight-regular.otf") format("opentype");
+}
+
+/*@font-face {*/
+
+font-family: "Futura-Medium";
+src: url("../font/futura/1/futuramedium.otf") format("opentype");
+}
+
+html {
+    font-size: 10px;
+    height: 100%;
+}
+
+body {
+    font-family: "xants";
+    margin-top: 30px;
+    color: #141823;
+
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20%;
+    list-style: none;
+    margin-left: 102%;
+    width: 100px;
+}
+
+.sticky li {
+    margin-top: 26%;
+}
+
+.sticky a {
+
+    color: #141823;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+}
+
+.sticky_ot a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.8px;
+    background: #141823;
+    transition: all 0.3s ease 0s;
+}
+
+.sticky_ot a:hover {}
+
+.sticky_ot a:hover::after {
+    width: 100%;
+}
+
+.sticky_nows a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.8px;
+    background: #39306f;
+}
+
+.sticky_nowb a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.8px;
+    background: #1b7dc2;
+}
+
+.sticky_nowse a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.8px;
+    background: #c13a1e;
+}
+
+.title {
+    position: relative;
+    margin-left: 10%;
+    margin-right: 15%;
+}
+
+.title h1 {
+
+    /*    font-size: 17rem;*/
+    float: left;
+    position: absolute;
+    top: 20px;
+    letter-spacing: 0.8rem;
+}
+
+/* 10rem(160px) @ 40rem(640px) increasing to 17rem(272px) @ 75rem(1200px) */
+
+@media (min-width: 40rem) {
+    .title h1 {
+        font-size: calc(10rem + ((1vw - 0.4rem) * 20));
+        /* Where: * 20 = 100 * font_Size_Difference / viewport_Width_Difference */
+    }
+    .title h2 {
+        font-size: calc(5rem + ((1vw - 0.4rem) * 11.4286));
+        /* Where: * 11.4286 = 100 * font_Size_Difference / viewport_Width_Difference */
+    }
+
+    .s1::after,
+    .s2::after,
+    .s3::after,
+    .s4::after,
+    .s5::after,
+    .s6::after,
+    .s7::after,
+    .s8::after,
+    .s9::after,
+    .s10::after,
+    .s11::after,
+    .b1::after,
+    .b2::after,
+    .b3::after,
+    .b4::after,
+    .b5::after,
+    .b6::after,
+    .b7::after,
+    .se1::after,
+    .se2::after,
+    .se3::after,
+    .se4::after,
+    .se5::after,
+    .se6::after,
+    .se7::after,
+    .se8::after,
+    .se9::after,
+    .se10::after,
+    .se11::after,
+    .se12::after,
+    .se13::after,
+    .se14::after,
+    .se15::after,
+        {
+        font-size: calc(1rem + ((1vw - 0.4rem) * 0.5714));
+    }
+}
+
+/* Prevent font scaling beyond this breakpoint */
+
+@media (min-width: 75rem) {
+    .title h1 {
+        font-size: 17rem;
+    }
+    .title h2 {
+        font-size: 9rem;
+    }
+
+    .s1::after,
+    .s2::after,
+    .s3::after,
+    .s4::after,
+    .s5::after,
+    .s6::after,
+    .s7::after,
+    .s8::after,
+    .s9::after,
+    .s10::after,
+    .s11::after,
+    .b1::after,
+    .b2::after,
+    .b3::after,
+    .b4::after,
+    .b5::after,
+    .b6::after,
+    .b7::after,
+    .se1::after,
+    .se2::after,
+    .se3::after,
+    .se4::after,
+    .se5::after,
+    .se6::after,
+    .se7::after,
+    .se8::after,
+    .se9::after,
+    .se10::after,
+    .se11::after,
+    .se12::after,
+    .se13::after,
+    .se14::after,
+    .se15::after,
+        {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 40rem) {
+    .title h1 {
+        font-size: 10rem;
+    }
+    .title h2 {
+        font-size: 5rem;
+    }
+
+    .s1::after,
+    .s2::after,
+    .s3::after,
+    .s4::after,
+    .s5::after,
+    .s6::after,
+    .s7::after,
+    .s8::after,
+    .s9::after,
+    .s10::after,
+    .s11::after,
+    .b1::after,
+    .b2::after,
+    .b3::after,
+    .b4::after,
+    .b5::after,
+    .b6::after,
+    .b7::after,
+    .se1::after,
+    .se2::after,
+    .se3::after,
+    .se4::after,
+    .se5::after,
+    .se6::after,
+    .se7::after,
+    .se8::after,
+    .se9::after,
+    .se10::after,
+    .se11::after,
+    .se12::after,
+    .se13::after,
+    .se14::after,
+    .se15::after,
+        {
+        font-size: 1rem;
+    }
+}
+
+.title h2 {
+    writing-mode: vertical-rl;
+    float: left;
+    /*    font-size: 9rem;*/
+    margin-left: 50%;
+    margin-top: 20px;
+    position: absolute;
+    top: 50px;
+    right: -5%;
+
+}
+
+.title img {
+    float: left;
+    padding-top: 20%;
+    margin-bottom: 50%;
+}
+
+.button {
+    width: 100%;
+    display: block;
+}
+
+.button a {
+    float: left;
+    font-size: 2rem;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 100%;
+    left: 44%;
+    color: #141823;
+    background-color: none;
+    border: solid 1px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition-duration: 0.7s;
+    transition-property: background,color;
+}
+
+.button a:hover {
+    background: #39306f;
+    color: #ffffff;
+
+
+
+}
+
+.sunset,
+.bluesky,
+.season {
+    position: relative;
+    margin: 0 12%;
+    margin-top: 5%;
+    list-style: none;
+}
+
+.sunset_1 {
+    margin-top: -20px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+.sunset_1:hover {
+    filter: grayscale(0);
+}
+
+.sunset_2 {
+    position: absolute;
+    left: 3%;
+    top: 20px;
+}
+
+.bluesky_1 {
+    margin-top: -30%;
+    animation-duration: 4s !Important;
+    -webkit-animation-duration: 4s !Important;
+}
+
+.bluesky_2 {
+    position: absolute;
+    left: 28%;
+    top: 6%;
+
+}
+
+.season_1 {
+    margin-top: -10%;
+}
+
+.season_2 {
+    position: absolute;
+    left: 25.6%;
+    top: 2.47%;
+}
+
+.sunset p,
+.bluesky p,
+.season p {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 50px;
+}
+
+.sunset p::after,
+.bluesky p::after,
+.season p::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: solid 1.5px #141823;
+    border-right: solid 1.5px #141823;
+    transform: rotate(45deg);
+    margin-top: 35px;
+    left: 49%;
+    transition: 0.3s;
+}
+
+.sunset p:hover::after,
+.bluesky p:hover::after,
+.season p:hover::after {
+    margin-top: 50px;
+}
+
+.sunset .photo,
+.bluesky .photo,
+.season .photo {
+    text-align: center;
+}
+
+.photo img {
+
+    margin-top: 150px;
+}
+
+.s1,
+.s2,
+.s3,
+.s4,
+.s5,
+.s6,
+.s7,
+.s8,
+.s9,
+.s10,
+.s11,
+.b1,
+.b2,
+.b3,
+.b4,
+.b5,
+.b6,
+.b7,
+    {
+    position: relative;
+}
+
+.s1::after {
+    content: '8 Sep. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s2::after {
+    content: '8 Sep. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s3::after {
+    content: '8 Sep. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s4::after {
+    content: '13 Sep. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s5::after {
+    content: '2 Nov. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s6::after {
+    content: '2 Oct. 2018';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s7::after {
+    content: '3 Oct. 2018';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s8::after {
+    content: '1 Nov. 2019';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s9::after {
+    content: '4 Dec. 2019';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s10::after {
+    content: '23 Dec. 2019';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.s11::after {
+    content: '10 Feb. 2020';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.b1::after {
+    content: '22 May. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.b2::after {
+    content: '22 May. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.b3::after {
+    content: '27 May. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.b4::after {
+    content: '26 Oct. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.b5::after {
+    content: '1 Nov. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.b6::after {
+    content: '1 Nov. 2018';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.b7::after {
+    content: '31 Oct. 2019';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se1::after {
+    content: '18 Nov. 2017';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se2::after {
+    content: '22 Jan. 2018';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se3::after {
+    content: '22 Jan. 2018';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se4::after {
+    content: '22 Jan. 2018';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se5::after {
+    content: '26 Mar. 2018';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se6::after {
+    content: '22 Nov. 2018';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se7::after {
+    content: '23 Nov. 2018';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se8::after {
+    content: '18 Nov. 2019';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se9::after {
+    content: '3 Dec. 2019';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se10::after {
+    content: '5 Dec. 2019';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se11::after {
+    content: '12 Dec. 2019';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se12::after {
+    content: '12 Dec. 2019';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se13::after {
+    content: '20 Jan. 2020';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se14::after {
+    content: '10 Feb. 2020';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.se15::after {
+    content: '28 Feb. 2020';
+    position: absolute;
+    /*    font-size: 1.2rem;*/
+    color: #141823;
+    bottom: -4%;
+    left: 76%;
+    z-index: 100;
+}
+
+.sunset .back {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #39306f;
+    opacity: 70%;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-bottom: 11%;
+}
+
+.bluesky .back {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1b7dc2;
+    opacity: 70%;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.season .back {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #c13a1e;
+    opacity: 70%;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.back img {
+    margin-left: 16%;
+    margin-top: 11%;
+}
+
+.FadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+
+}
